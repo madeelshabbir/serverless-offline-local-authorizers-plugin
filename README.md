@@ -56,7 +56,7 @@ Of course you could also just return a mocked response, call Cognito to mock you
 whatever suits your needs. You can also define multiple authorizer functions if you need to.
 
 *Step 2:* In your `serverless.yml`, add the `localAuthorizer` property to your http events. This will not interfere
-with your "real" authorizers and will be ignored upon deployment. 
+with your "real" authorizers and will be ignored upon deployment.
 
 ```yaml
 functions:
@@ -76,11 +76,11 @@ functions:
 
 ```
 
-*Step 3:* Add the plugin to the plugins sections in `serverless.yml`:
+*Step 3:* Add the plugin path to the plugins sections in `serverless.yml`:
 
 ```yaml
 plugins:
-  - serverless-offline-local-authorizers-plugin
+  - ./node_modules/@madeelshabbir/serverless-offline-local-authorizers-plugin
   - serverless-offline
 ```
 
